@@ -1,6 +1,6 @@
 # elm-bem
 
-Utilities for following [Block-Element-Modifier](https://getbem.com/naming) 
+Utilities for following BEM ([Block-Element-Modifier](https://getbem.com/naming))
 conventions in CSS classes.
 
 This library builds on work done in 
