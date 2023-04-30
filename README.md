@@ -3,7 +3,9 @@
 Utilities for following [Block-Element-Modifier](https://getbem.com/naming) 
 conventions in CSS classes.
 
-This library builds on work done in [renanpvaz/elm-bem]() with a different API.
+This library builds on work done in 
+[renanpvaz/elm-bem](https://package.elm-lang.org/packages/renanpvaz/elm-bem/latest) 
+with a different API.
 
 It supports both "flag" style and "key-value" style modifiers on blocks and
 elements.
@@ -29,15 +31,16 @@ view blockName model =
     div
         [ block |> Bem.block ]
         [ header
-            [ headerEl |> Bem.elementIf "sticky" sticky ]  
-            [ h1 [] [ text title ] ]
+            [ headerEl |> Bem.elementIf "sticky" model.sticky ]  
+            [ h1 [] [ text model.title ] ]
         , div
-            [ bodyEl |> Bem.elementOf "type" bodyData.bodyType ]
-            [ viewBody block bodyData ]
+            [ bodyEl |> Bem.elementOf "type" model.bodyData.bodyType ]
+            [ viewBody block model.bodyData ]
         ]
 
 viewBody : Bem.Block -> BodyData -> Html msg
--- render sub-elements tied to the top-level Bem.Block
+viewBody block bodyData =
+    -- render sub-elements tied to the top-level Bem.Block
 
 ```
 

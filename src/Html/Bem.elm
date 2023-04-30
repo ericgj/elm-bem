@@ -18,7 +18,8 @@ module Html.Bem exposing
     , init
     )
 
-{-| Utilities for building CSS class names based on [BEM conventions]().
+{-| Utilities for building CSS class names based on 
+[BEM conventions](https://getbem.com/naming).
 
 
 # Creating
